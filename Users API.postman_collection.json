@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "035274a5-6079-47d0-96b2-260f82013b88",
+		"name": "Users API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35148780"
+	},
+	"item": [
+		{
+			"name": "Fetches User List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetches User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/3",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updates User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/3?email=\"dummy@gmail.com&first_name=dummy",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"3"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "\"dummy@gmail.com"
+						},
+						{
+							"key": "first_name",
+							"value": "dummy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updates User",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/5?email=dummy1@gmail.com&first_name=dummy1&last_name=morris",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"5"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "dummy1@gmail.com"
+						},
+						{
+							"key": "first_name",
+							"value": "dummy1"
+						},
+						{
+							"key": "last_name",
+							"value": "morris"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletes User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/3",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creates User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/register",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "1c31c465-577a-4ee7-b03f-44d4a45c6dad",
+		"name": "Resource API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35148780"
+	},
+	"item": [
+		{
+			"name": "Fetch Unknown Resource",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/90",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"90"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updates Unknown Resource",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/11?email=dummy2@gmail.com&first_name=Dummy2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"11"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "dummy2@gmail.com"
+						},
+						{
+							"key": "first_name",
+							"value": "Dummy2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Unknown Resource",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `\r",
+							"<style type=\"text/css\">\r",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+							"    .tftable tr {background-color:#ffffff;}\r",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+							"    .tftable tr:hover {background-color:#e0ffff;}\r",
+							"</style>\r",
+							"\r",
+							"<table class=\"tftable\" border=\"1\">\r",
+							"    <tr>\r",
+							"        <th>Updated At</th>\r",
+							"    </tr>\r",
+							"    <tr>\r",
+							"        <td>{{response.updatedAt}}</td>\r",
+							"    </tr>\r",
+							"</table>\r",
+							"`;\r",
+							"\r",
+							"function constructVisualizerPayload() {\r",
+							"    return {response: pm.response.json()}\r",
+							"}\r",
+							"\r",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/11?first_name=Sadikshya&last_name=Acharya",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"11"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Sadikshya"
+						},
+						{
+							"key": "last_name",
+							"value": "Acharya"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Unknown Resource",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/13",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetching Resource List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/resource",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"resource"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
